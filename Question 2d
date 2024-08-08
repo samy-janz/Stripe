@@ -1,0 +1,9 @@
+Bank Statement
+
+2a + 2b: 
+//An authorized payment guarantees the authorized amount of $100. This is a temporary charge that lasts about 5-7 days awaiting further action. 
+
+2c:
+// Once the capture occurs, a refund is processed as a reversal.
+// This means that the original charge will drop off the bank statement altogether, as if it never occurred, and the bank account balance will adjust to credit that money back without a specific line item on the statement.
+// They should not see the charge on their statement, it is reversed and the refund is complete.
