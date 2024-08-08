@@ -1,1 +1,2 @@
----
+stripe payment_intents confirm pi_3PlPpcRr4FsILDOD0IY1riHe --payment-method="pm_card_visa" --return-url="https://dashboard.stripe.com/test/customers/cus_QcdimGNGBe9aKt"
+
