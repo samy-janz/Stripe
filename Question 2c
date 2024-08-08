@@ -1,1 +1,5 @@
-stripe payment_intents capture pi_3Ple91Rr4FsILDOD0s1YK1Aj --amount-to-capture="7500"
+stripe payment_intents capture pi_3PleGBRr4FsILDOD0pomjbXM --amount-to-capture="7500"
+
+// The captured amount is charged against the payment method.
+// The portion which is not captured is reversed for this payment. 
+//The reversed amount is not settled and will be deducted from the original payment on the customer's bank statement.
