@@ -1,9 +1,9 @@
-stripe payment_intents create --amount="10000" --currency="usd" --customer="cus_QcdimGNGBe9aKt" --payment-method="pm_1PlOQwRr4FsILDODiPaTFJ0h"
+stripe payment_intents create --amount="10000" --currency="usd" --capture-method="manual" --payment-method="pm_1PlOQwRr4FsILDODiPaTFJ0h" --customer="cus_QcdimGNGBe9aKt"
 
-//Payment Intent ID: "pi_3PlQdFRr4FsILDOD03rmXXYT"
+//Payment Intent ID: pi_3PldLIRr4FsILDOD007y2ZTr
 
 {
-  "id": "pi_3PlQdFRr4FsILDOD03rmXXYT",
+  "id": "pi_3PldLIRr4FsILDOD007y2ZTr",
   "object": "payment_intent",
   "amount": 10000,
   "amount_capturable": 0,
@@ -19,17 +19,17 @@ stripe payment_intents create --amount="10000" --currency="usd" --customer="cus_
   },
   "canceled_at": null,
   "cancellation_reason": null,
-  "capture_method": "automatic",
+  "capture_method": "manual",
   "charges": {
     "object": "list",
     "data": [],
     "has_more": false,
     "total_count": 0,
-    "url": "/v1/charges?payment_intent=pi_3PlQdFRr4FsILDOD03rmXXYT"
+    "url": "/v1/charges?payment_intent=pi_3PldLIRr4FsILDOD007y2ZTr"
   },
-  "client_secret": "pi_3PlQdFRr4FsILDOD03rmXXYT_secret_C9gSIzx8VNOduExnPcXF2p4I7",
+  "client_secret": "pi_3PldLIRr4FsILDOD007y2ZTr_secret_4jnriICNF2DKom6bzGPYcwavT",
   "confirmation_method": "automatic",
-  "created": 1723101573,
+  "created": 1723150432,
   "currency": "usd",
   "customer": "cus_QcdimGNGBe9aKt",
   "description": null,
