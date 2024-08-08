@@ -1,12 +1,12 @@
 stripe payment_intents create --amount="10000" --currency="usd" --capture-method="manual" --payment-method="pm_1PlOQwRr4FsILDODiPaTFJ0h" --customer="cus_QcdimGNGBe9aKt"
 
-//Payment Intent ID: pi_3PldLIRr4FsILDOD007y2ZTr
+//Payment Intent ID: pi_3Ple77Rr4FsILDOD1WccptAw
 
 {
-  "id": "pi_3PldLIRr4FsILDOD007y2ZTr",
+  "id": "pi_3Ple77Rr4FsILDOD1WccptAw",
   "object": "payment_intent",
   "amount": 10000,
-  "amount_capturable": 0,
+  "amount_capturable": 10000,
   "amount_details": {
     "tip": {}
   },
@@ -22,20 +22,132 @@ stripe payment_intents create --amount="10000" --currency="usd" --capture-method
   "capture_method": "manual",
   "charges": {
     "object": "list",
-    "data": [],
+    "data": [
+      {
+        "id": "ch_3Ple77Rr4FsILDOD1g3gXrc2",
+        "object": "charge",
+        "amount": 10000,
+        "amount_captured": 0,
+        "amount_refunded": 0,
+        "amount_updates": [],
+        "application": null,
+        "application_fee": null,
+        "application_fee_amount": null,
+        "balance_transaction": null,
+        "billing_details": {
+          "address": {
+            "city": null,
+            "country": null,
+            "line1": null,
+            "line2": null,
+            "postal_code": null,
+            "state": null
+          },
+          "email": null,
+          "name": null,
+          "phone": null
+        },
+        "calculated_statement_descriptor": "SAMY JANZARLI",
+        "captured": false,
+        "created": 1723153398,
+        "currency": "usd",
+        "customer": "cus_QcdimGNGBe9aKt",
+        "description": null,
+        "destination": null,
+        "dispute": null,
+        "disputed": false,
+        "failure_balance_transaction": null,
+        "failure_code": null,
+        "failure_message": null,
+        "fraud_details": {},
+        "invoice": null,
+        "livemode": false,
+        "metadata": {},
+        "on_behalf_of": null,
+        "order": null,
+        "outcome": {
+          "network_status": "approved_by_network",
+          "reason": null,
+          "risk_level": "normal",
+          "risk_score": 11,
+          "seller_message": "Payment complete.",
+          "type": "authorized"
+        },
+        "paid": true,
+        "payment_intent": "pi_3Ple77Rr4FsILDOD1WccptAw",
+        "payment_method": "pm_1PlOQwRr4FsILDODiPaTFJ0h",
+        "payment_method_details": {
+          "card": {
+            "amount_authorized": 10000,
+            "authorization_code": null,
+            "brand": "visa",
+            "capture_before": 1723758198,
+            "checks": {
+              "address_line1_check": null,
+              "address_postal_code_check": null,
+              "cvc_check": null
+            },
+            "country": "US",
+            "exp_month": 8,
+            "exp_year": 2025,
+            "extended_authorization": {
+              "status": "disabled"
+            },
+            "fingerprint": "s7TQrcPTsm19q65Z",
+            "funding": "credit",
+            "incremental_authorization": {
+              "status": "unavailable"
+            },
+            "installments": null,
+            "issuer": "Stripe Payments UK Limited",
+            "last4": "4242",
+            "mandate": null,
+            "moto": null,
+            "multicapture": {
+              "status": "unavailable"
+            },
+            "network": "visa",
+            "network_token": {
+              "used": false
+            },
+            "overcapture": {
+              "maximum_amount_capturable": 10000,
+              "status": "unavailable"
+            },
+            "three_d_secure": null,
+            "wallet": null
+          },
+          "type": "card"
+        },
+        "radar_options": {},
+        "receipt_email": null,
+        "receipt_number": null,
+        "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUGxIUXFScjRGc0lMRE9EKPb31LUGMgbFJFaZBeU6LBY52R89grMKk3T0SZSfnSO9h7BMjXpoKqxfcsUwkp--GRnVogo8XyERG4bN",
+        "refunded": false,
+        "review": null,
+        "shipping": null,
+        "source": null,
+        "source_transfer": null,
+        "statement_descriptor": null,
+        "statement_descriptor_suffix": null,
+        "status": "succeeded",
+        "transfer_data": null,
+        "transfer_group": null
+      }
+    ],
     "has_more": false,
-    "total_count": 0,
-    "url": "/v1/charges?payment_intent=pi_3PldLIRr4FsILDOD007y2ZTr"
+    "total_count": 1,
+    "url": "/v1/charges?payment_intent=pi_3Ple77Rr4FsILDOD1WccptAw"
   },
-  "client_secret": "pi_3PldLIRr4FsILDOD007y2ZTr_secret_4jnriICNF2DKom6bzGPYcwavT",
+  "client_secret": "pi_3Ple77Rr4FsILDOD1WccptAw_secret_LsHNOXtqSp5o4VkYKVxUY0Q6p",
   "confirmation_method": "automatic",
-  "created": 1723150432,
+  "created": 1723153397,
   "currency": "usd",
   "customer": "cus_QcdimGNGBe9aKt",
   "description": null,
   "invoice": null,
   "last_payment_error": null,
-  "latest_charge": null,
+  "latest_charge": "ch_3Ple77Rr4FsILDOD1g3gXrc2",
   "livemode": false,
   "metadata": {},
   "next_action": null,
@@ -61,7 +173,7 @@ stripe payment_intents create --amount="10000" --currency="usd" --capture-method
   "source": null,
   "statement_descriptor": null,
   "statement_descriptor_suffix": null,
-  "status": "requires_confirmation",
+  "status": "requires_capture",
   "transfer_data": null,
   "transfer_group": null
 }
