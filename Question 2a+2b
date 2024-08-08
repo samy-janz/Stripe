@@ -1,9 +1,9 @@
 stripe payment_intents create --amount="10000" --currency="usd" --customer="cus_QcdimGNGBe9aKt" --payment-method="pm_1PlOQwRr4FsILDODiPaTFJ0h"
 
-//Payment Intent ID: "pi_3PlPpcRr4FsILDOD0IY1riHe"
+//Payment Intent ID: "pi_3PlQdFRr4FsILDOD03rmXXYT"
 
 {
-  "id": "pi_3PlPpcRr4FsILDOD0IY1riHe",
+  "id": "pi_3PlQdFRr4FsILDOD03rmXXYT",
   "object": "payment_intent",
   "amount": 10000,
   "amount_capturable": 0,
@@ -25,11 +25,11 @@ stripe payment_intents create --amount="10000" --currency="usd" --customer="cus_
     "data": [],
     "has_more": false,
     "total_count": 0,
-    "url": "/v1/charges?payment_intent=pi_3PlPpcRr4FsILDOD0IY1riHe"
+    "url": "/v1/charges?payment_intent=pi_3PlQdFRr4FsILDOD03rmXXYT"
   },
-  "client_secret": "pi_3PlPpcRr4FsILDOD0IY1riHe_secret_SfhSgrKy38IJ8ZCwMeyHhewWE",
+  "client_secret": "pi_3PlQdFRr4FsILDOD03rmXXYT_secret_C9gSIzx8VNOduExnPcXF2p4I7",
   "confirmation_method": "automatic",
-  "created": 1723098496,
+  "created": 1723101573,
   "currency": "usd",
   "customer": "cus_QcdimGNGBe9aKt",
   "description": null,
