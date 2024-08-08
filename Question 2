@@ -1,1 +1,3 @@
+stripe payment_intents create --amount="10000" --currency="usd" --customer="cus_QcdimGNGBe9aKt" --payment-method="pm_1PlOQwRr4FsILDODiPaTFJ0h"
 
+//Payment Intent ID: "pi_3PlPpcRr4FsILDOD0IY1riHe"
