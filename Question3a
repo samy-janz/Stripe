@@ -1,0 +1,462 @@
+stripe accounts create --business-type="individual" -d "individual[first_name]=Driver"
+
+//acct_id: acct_1Plf8bRwMUTtboFS
+
+{
+  "id": "acct_1Plf8bRwMUTtboFS",
+  "object": "account",
+  "business_profile": {
+    "annual_revenue": null,
+    "estimated_worker_count": null,
+    "mcc": null,
+    "name": null,
+    "product_description": null,
+    "support_address": null,
+    "support_email": null,
+    "support_phone": null,
+    "support_url": null,
+    "url": null
+  },
+  "business_type": "individual",
+  "can_unset_representative": true,
+  "capabilities": {},
+  "charges_enabled": false,
+  "company": {
+    "address": {
+      "city": null,
+      "country": "US",
+      "line1": null,
+      "line2": null,
+      "postal_code": null,
+      "state": null
+    },
+    "directors_provided": true,
+    "executives_provided": true,
+    "name": null,
+    "owners_provided": true,
+    "tax_id_provided": false,
+    "verification": {
+      "details": null,
+      "details_code": null,
+      "document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "status": "unverified"
+    }
+  },
+  "connected_on": 1723157335,
+  "controller": {
+    "application": {
+      "loss_liable": false,
+      "onboarding_owner": false,
+      "pricing_controls": false
+    },
+    "dashboard": {
+      "type": "full"
+    },
+    "fees": {
+      "payer": "account"
+    },
+    "is_controller": true,
+    "losses": {
+      "payments": "stripe"
+    },
+    "requirement_collection": "stripe",
+    "stripe_dashboard": {
+      "type": "full"
+    },
+    "type": "application"
+  },
+  "controlling_platform": "acct_1PlHQqRr4FsILDOD",
+  "controlling_platform_manages_capabilities": true,
+  "country": "US",
+  "created": 1723157335,
+  "creation_request": "1723157333-req_evyGd3YSY3E7QT",
+  "dashboard_account_status": "restricted",
+  "dashboard_type": "full",
+  "default_account_holder_name": "DRIVER",
+  "default_currency": "usd",
+  "details_submitted": false,
+  "email": null,
+  "email_confirmed": false,
+  "external_account_changes_disabled": false,
+  "external_accounts": {
+    "object": "list",
+    "data": [],
+    "has_more": false,
+    "total_count": 0,
+    "url": "/v1/accounts/acct_1Plf8bRwMUTtboFS/external_accounts"
+  },
+  "fake_account": true,
+  "future_requirements": {
+    "alternatives": [],
+    "current_deadline": null,
+    "currently_due": [],
+    "disabled_reason": null,
+    "errors": [],
+    "eventually_due": [],
+    "past_due": [],
+    "pending_verification": [],
+    "previously_due": []
+  },
+  "individual": {
+    "id": "person_1Plf8bRwMUTtboFSHMc5TYp4",
+    "object": "person",
+    "account": "acct_1Plf8bRwMUTtboFS",
+    "address": {
+      "city": null,
+      "country": "US",
+      "line1": null,
+      "line2": null,
+      "postal_code": null,
+      "state": null
+    },
+    "created": 1723157334,
+    "dob": {
+      "day": null,
+      "month": null,
+      "year": null
+    },
+    "first_name": "Driver",
+    "future_requirements": {
+      "alternatives": [],
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": []
+    },
+    "id_number_country": "US",
+    "id_number_keyed_in": false,
+    "id_number_provided": false,
+    "last_name": null,
+    "metadata": {},
+    "personal_id_number_country": "US",
+    "relationship": {
+      "controller": false,
+      "director": false,
+      "executive": false,
+      "legal_guardian": false,
+      "officer": false,
+      "owner": false,
+      "partner": false,
+      "percent_ownership": null,
+      "representative": true,
+      "title": null
+    },
+    "requirements": {
+      "alternatives": [],
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": []
+    },
+    "ssn_last_4_provided": false,
+    "verification": {
+      "additional_document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "details": "This person does not need to be verified to enable account capabilities",
+      "details_code": null,
+      "document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "status": "unverified"
+    }
+  },
+  "invoice_settings": {
+    "disable_legacy_credit_transfer_sources_types": true,
+    "failure_days": 60,
+    "invoicing_final_action": "none",
+    "manual_tax_rounding_behavior": "group",
+    "next_invoice_sequence_livemode": 1,
+    "next_invoice_sequence_testmode": 1,
+    "numbering_scheme": "customer_level",
+    "pastdue_invoices_final_transition": "none",
+    "pastdue_invoices_final_transition_days": 60,
+    "payment_methods_enabled_for_merchant": {
+      "ach_credit_transfer": false,
+      "acss_debit": true,
+      "afterpay_clearpay": false,
+      "alipay": false,
+      "amazon_pay": true,
+      "au_becs_debit": false,
+      "bacs_debit": false,
+      "bancontact": false,
+      "boleto": false,
+      "card": true,
+      "cashapp": true,
+      "customer_balance": true,
+      "demo_pay": false,
+      "eps": false,
+      "fpx": false,
+      "giropay": false,
+      "grabpay": false,
+      "id_bank_transfer": false,
+      "id_credit_transfer": false,
+      "ideal": false,
+      "jp_credit_transfer": false,
+      "kakao_pay": false,
+      "klarna": false,
+      "konbini": false,
+      "kr_card": false,
+      "kr_market": false,
+      "link": true,
+      "multibanco": true,
+      "naver_pay": false,
+      "netbanking": false,
+      "ng_market": false,
+      "nz_bank_account": false,
+      "p24": false,
+      "paper_check": false,
+      "payco": false,
+      "paynow": false,
+      "paypal": false,
+      "promptpay": false,
+      "revolut_pay": true,
+      "sepa_credit_transfer": false,
+      "sepa_debit": false,
+      "sofort": false,
+      "swish": false,
+      "upi": false,
+      "us_bank_account": true,
+      "wechat_pay": true
+    },
+    "send_hosted_payment_email": true,
+    "send_invoices": true,
+    "smart_dunning_enabled": true,
+    "supported_payment_methods": {
+      "ach_credit_transfer": false,
+      "acss_debit": false,
+      "afterpay_clearpay": false,
+      "alipay": false,
+      "amazon_pay": false,
+      "au_becs_debit": false,
+      "bacs_debit": false,
+      "bancontact": false,
+      "boleto": false,
+      "card": true,
+      "cashapp": true,
+      "customer_balance": true,
+      "demo_pay": false,
+      "eps": false,
+      "fpx": false,
+      "giropay": false,
+      "grabpay": false,
+      "id_bank_transfer": false,
+      "id_credit_transfer": false,
+      "ideal": false,
+      "jp_credit_transfer": false,
+      "kakao_pay": false,
+      "klarna": false,
+      "konbini": false,
+      "kr_card": false,
+      "kr_market": false,
+      "link": true,
+      "multibanco": false,
+      "naver_pay": false,
+      "netbanking": false,
+      "ng_market": false,
+      "nz_bank_account": false,
+      "p24": false,
+      "paper_check": false,
+      "payco": false,
+      "paynow": false,
+      "paypal": false,
+      "promptpay": false,
+      "revolut_pay": false,
+      "sepa_credit_transfer": false,
+      "sepa_debit": false,
+      "sofort": false,
+      "swish": false,
+      "upi": false,
+      "us_bank_account": true,
+      "wechat_pay": true
+    }
+  },
+  "legal_entity_shared_with": [],
+  "merchants_reonboarded_to": [],
+  "metadata": {},
+  "payouts_enabled": false,
+  "platform_can_request_capabilities": true,
+  "platform_can_unrequest_capabilities": true,
+  "primary_user": {
+    "id": "usr_QcuyGjizbks6NK",
+    "object": "user",
+    "email": null,
+    "name": null,
+    "password_set": null
+  },
+  "proration_settings": {
+    "smart_prorations": false
+  },
+  "reonboarding_destination_merchants": [],
+  "requirements": {
+    "alternatives": [],
+    "current_deadline": null,
+    "currently_due": [
+      "business_profile.product_description",
+      "business_profile.support_phone",
+      "business_profile.url",
+      "external_account",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "disabled_reason": "requirements.past_due",
+    "errors": [],
+    "eventually_due": [
+      "business_profile.product_description",
+      "business_profile.support_phone",
+      "business_profile.url",
+      "external_account",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "past_due": [
+      "external_account",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "pending_verification": [],
+    "previously_due": []
+  },
+  "settings": {
+    "bacs_debit_payments": {
+      "display_name": null,
+      "service_user_number": null
+    },
+    "branding": {
+      "icon": null,
+      "logo": null,
+      "primary_color": null,
+      "secondary_color": null,
+      "show_support_phone": true
+    },
+    "card_issuing": {
+      "tos_acceptance": {
+        "date": null,
+        "ip": null
+      },
+      "tos_acceptances": {
+        "account_holder": {
+          "date": null,
+          "ip": null,
+          "url": "https://stripe.com/legal/ssa#services-terms"
+        },
+        "apple_pay_celtic": {
+          "date": null,
+          "ip": null,
+          "url": "https://stripe.com/legal/issuing/celtic/apple-payment-platform-program-manager-customer-terms-and-conditions#exhibit-c-pass-through-provisions"
+        },
+        "apple_pay_cross_river": {
+          "date": null,
+          "ip": null,
+          "url": "https://stripe.com/legal/issuing/crb/apple-payment-platform-program-manager-customer-terms-and-conditions#exhibit-c-pass-through-provisions"
+        },
+        "charge_card_celtic": {
+          "date": null,
+          "ip": null,
+          "url": "https://stripe.com/legal/celtic-charge-card"
+        },
+        "charge_card_celtic_platform": {
+          "date": null,
+          "ip": null,
+          "url": null
+        },
+        "charge_card_cross_river": {
+          "date": null,
+          "ip": null,
+          "url": "https://stripe.com/legal/issuing/crb-charge-card"
+        },
+        "charge_card_cross_river_financing_disclosures": {
+          "date": null,
+          "ip": null,
+          "url": null
+        },
+        "charge_card_cross_river_platform": {
+          "date": null,
+          "ip": null,
+          "url": null
+        },
+        "spend_card_celtic": {
+          "date": null,
+          "ip": null,
+          "url": "https://stripe.com/legal/celtic-spend-card"
+        },
+        "spend_card_cross_river": {
+          "date": null,
+          "ip": null,
+          "url": "https://stripe.com/legal/issuing/crb-spend-card"
+        },
+        "spend_card_cross_river_financing_disclosures": {
+          "date": null,
+          "ip": null,
+          "url": null
+        }
+      }
+    },
+    "card_issuing_payout": {
+      "tos_acceptance": {
+        "date": null,
+        "ip": null
+      }
+    },
+    "card_payments": {
+      "decline_on": {
+        "avs_failure": false,
+        "cvc_failure": true
+      },
+      "statement_descriptor_prefix": null,
+      "statement_descriptor_prefix_kana": null,
+      "statement_descriptor_prefix_kanji": null
+    },
+    "dashboard": {
+      "display_name": null,
+      "timezone": "Etc/UTC"
+    },
+    "invoices": {
+      "default_account_tax_ids": null
+    },
+    "konbini_payments": {},
+    "payments": {
+      "statement_descriptor": null,
+      "statement_descriptor_kana": null,
+      "statement_descriptor_kanji": null
+    },
+    "payouts": {
+      "debit_negative_balances": true,
+      "schedule": {
+        "delay_days": 2,
+        "interval": "daily"
+      },
+      "statement_descriptor": null
+    },
+    "sepa_debit_payments": {},
+    "treasury": {
+      "tos_acceptance": {
+        "date": null,
+        "ip": null
+      }
+    }
+  },
+  "stripe_owns_card_payments_pricing": true,
+  "stripe_owns_instant_payouts_pricing": true,
+  "stripe_owns_lpm_payments_pricing": true,
+  "stripe_owns_onboarding": true,
+  "tos_acceptance": {
+    "date": null,
+    "ip": null,
+    "user_agent": null
+  },
+  "type": "standard"
+}
