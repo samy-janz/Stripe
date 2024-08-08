@@ -1,9 +1,9 @@
 stripe payment_intents create --amount="10000" --currency="usd" --capture-method="manual" --payment-method="pm_1PlOQwRr4FsILDODiPaTFJ0h" --customer="cus_QcdimGNGBe9aKt"
 
-//Payment Intent ID: pi_3Ple77Rr4FsILDOD1WccptAw
+//Payment Intent ID: pi_3PleGBRr4FsILDOD0pomjbXM
 
 {
-  "id": "pi_3Ple77Rr4FsILDOD1WccptAw",
+  "id": "pi_3PleGBRr4FsILDOD0pomjbXM",
   "object": "payment_intent",
   "amount": 10000,
   "amount_capturable": 10000,
@@ -24,7 +24,7 @@ stripe payment_intents create --amount="10000" --currency="usd" --capture-method
     "object": "list",
     "data": [
       {
-        "id": "ch_3Ple77Rr4FsILDOD1g3gXrc2",
+        "id": "ch_3PleGBRr4FsILDOD0XYAopDO",
         "object": "charge",
         "amount": 10000,
         "amount_captured": 0,
@@ -49,7 +49,7 @@ stripe payment_intents create --amount="10000" --currency="usd" --capture-method
         },
         "calculated_statement_descriptor": "SAMY JANZARLI",
         "captured": false,
-        "created": 1723153398,
+        "created": 1723153960,
         "currency": "usd",
         "customer": "cus_QcdimGNGBe9aKt",
         "description": null,
@@ -69,19 +69,19 @@ stripe payment_intents create --amount="10000" --currency="usd" --capture-method
           "network_status": "approved_by_network",
           "reason": null,
           "risk_level": "normal",
-          "risk_score": 11,
+          "risk_score": 34,
           "seller_message": "Payment complete.",
           "type": "authorized"
         },
         "paid": true,
-        "payment_intent": "pi_3Ple77Rr4FsILDOD1WccptAw",
+        "payment_intent": "pi_3PleGBRr4FsILDOD0pomjbXM",
         "payment_method": "pm_1PlOQwRr4FsILDODiPaTFJ0h",
         "payment_method_details": {
           "card": {
             "amount_authorized": 10000,
             "authorization_code": null,
             "brand": "visa",
-            "capture_before": 1723758198,
+            "capture_before": 1723758760,
             "checks": {
               "address_line1_check": null,
               "address_postal_code_check": null,
@@ -122,7 +122,7 @@ stripe payment_intents create --amount="10000" --currency="usd" --capture-method
         "radar_options": {},
         "receipt_email": null,
         "receipt_number": null,
-        "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUGxIUXFScjRGc0lMRE9EKPb31LUGMgbFJFaZBeU6LBY52R89grMKk3T0SZSfnSO9h7BMjXpoKqxfcsUwkp--GRnVogo8XyERG4bN",
+        "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUGxIUXFScjRGc0lMRE9EKKj81LUGMgYWj6ITv6w6LBb2BJftewxGtQ7AgWgv6JEJbXpqy-h_IdiRMPSl18BlqmCvcOIvu05E36TS",
         "refunded": false,
         "review": null,
         "shipping": null,
@@ -137,17 +137,17 @@ stripe payment_intents create --amount="10000" --currency="usd" --capture-method
     ],
     "has_more": false,
     "total_count": 1,
-    "url": "/v1/charges?payment_intent=pi_3Ple77Rr4FsILDOD1WccptAw"
+    "url": "/v1/charges?payment_intent=pi_3PleGBRr4FsILDOD0pomjbXM"
   },
-  "client_secret": "pi_3Ple77Rr4FsILDOD1WccptAw_secret_LsHNOXtqSp5o4VkYKVxUY0Q6p",
+  "client_secret": "pi_3PleGBRr4FsILDOD0pomjbXM_secret_vNh7slDb0McClis1qRgFAhK7j",
   "confirmation_method": "automatic",
-  "created": 1723153397,
+  "created": 1723153959,
   "currency": "usd",
   "customer": "cus_QcdimGNGBe9aKt",
   "description": null,
   "invoice": null,
   "last_payment_error": null,
-  "latest_charge": "ch_3Ple77Rr4FsILDOD1g3gXrc2",
+  "latest_charge": "ch_3PleGBRr4FsILDOD0XYAopDO",
   "livemode": false,
   "metadata": {},
   "next_action": null,
