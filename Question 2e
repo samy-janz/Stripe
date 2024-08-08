@@ -1,0 +1,7 @@
+Two Use Cases:
+
+1. Hotels
+// Hotels often authorize a payment in full before a guest arrives, then capture the money when the guest checks out.
+
+2. Car Rentals
+// Rental agencies will authorize a payment in full before the guest picks up the car, then captures the money when the guest returns the car.
