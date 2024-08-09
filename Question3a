@@ -1,39 +1,48 @@
-stripe accounts create --business-type="individual" -d "individual[first_name]=Driver"
+stripe accounts create --type="custom" --country="US" --business-type="individual" --external-account="btok_us" -d "capabilities[card_payments][requested]=true" -d "capabilities[transfers][requested]=true"
 
-//acct_id: acct_1Plf8bRwMUTtboFS
+stripe accounts update acct_1PllAPRokgnkBouw -d "business_profile[mcc]=5045" -d "business_profile[url]=https://www.lyft.com/" -d "individual[address][city]=Seattle" -d "individual[address][line1]=2465 6th Ave" -d "individual[address][postal_code]=98109" -d "individual[address][state]=Washington" -d "individual[dob][day]=28" -d "individual[dob][month]=4" -d "individual[dob][year]=1994" -d "individual[email]=samjanzarli@utexas.edu" -d "individual[first_name]=Samy" -d "individual[last_name]=Janz" -d "individual[phone]=9729040647" -d "individual[ssn_last_4]=4321" -d "settings[payments][statement_descriptor]=SAM" -d "tos_acceptance[ip]=8.8.8.8" -d "tos_acceptance[date]=1723033465"
+
+stripe accounts update acct_1PllAPRokgnkBouw -d "business_profile[mcc]=5045" -d "business_profile[url]=https://www.lyft.com/" -d "individual[address][city]=Seattle" -d "individual[address][line1]=2465 6th Ave" -d "individual[address][postal_code]=98109" -d "individual[address][state]=Washington" -d "individual[dob][day]=28" -d "individual[dob][month]=4" -d "individual[dob][year]=1994" -d "individual[email]=samjanzarli@utexas.edu" -d "individual[first_name]=Samy" -d "individual[last_name]=Janz" -d "individual[phone]=9729040647" -d "individual[ssn_last_4]=4321" -d "settings[payments][statement_descriptor]=SAMYJANZ" -d "tos_acceptance[ip]=8.8.8.8" -d "tos_acceptance[date]=1723033465"
+
+stripe accounts update acct_1PllAPRokgnkBouw -d "individual[dob][year]=1901" -d "individual[dob][month]=1" -d "individual[dob][day]=1" -d "individual[address][line1]=address_full_match​ " -d "individual[address][city]=Seattle" -d "individual[address][postal_code]=98109" -d "individual[address][state]=Washington" -d "individual[ssn_last_4]=0000" -d "individual[id_number]=000000000"
+
+//acct_id: acct_1PllAPRokgnkBouw
 
 {
-  "id": "acct_1Plf8bRwMUTtboFS",
+  "id": "acct_1PllAPRokgnkBouw",
   "object": "account",
   "business_profile": {
     "annual_revenue": null,
     "estimated_worker_count": null,
-    "mcc": null,
+    "mcc": "5045",
     "name": null,
     "product_description": null,
     "support_address": null,
     "support_email": null,
     "support_phone": null,
     "support_url": null,
-    "url": null
+    "url": "https://www.lyft.com/"
   },
   "business_type": "individual",
-  "can_unset_representative": true,
-  "capabilities": {},
+  "capabilities": {
+    "card_payments": "pending",
+    "transfers": "pending"
+  },
   "charges_enabled": false,
   "company": {
     "address": {
-      "city": null,
+      "city": "Seattle",
       "country": "US",
-      "line1": null,
+      "line1": "address_full_match​\t",
       "line2": null,
-      "postal_code": null,
-      "state": null
+      "postal_code": "98109",
+      "state": "Washington"
     },
     "directors_provided": true,
     "executives_provided": true,
     "name": null,
     "owners_provided": true,
+    "phone": "+19729040647",
     "tax_id_provided": false,
     "verification": {
       "details": null,
@@ -44,53 +53,87 @@ stripe accounts create --business-type="individual" -d "individual[first_name]=D
         "details_code": null,
         "front": null
       },
-      "status": "unverified"
+      "status": "pending"
     }
   },
-  "connected_on": 1723157335,
   "controller": {
     "application": {
-      "loss_liable": false,
-      "onboarding_owner": false,
-      "pricing_controls": false
+      "loss_liable": true,
+      "onboarding_owner": true,
+      "pricing_controls": true
     },
     "dashboard": {
-      "type": "full"
+      "type": "none"
     },
     "fees": {
-      "payer": "account"
+      "payer": "application_custom"
     },
     "is_controller": true,
     "losses": {
-      "payments": "stripe"
+      "payments": "application"
     },
-    "requirement_collection": "stripe",
+    "requirement_collection": "application",
     "stripe_dashboard": {
-      "type": "full"
+      "type": "none"
     },
     "type": "application"
   },
-  "controlling_platform": "acct_1PlHQqRr4FsILDOD",
-  "controlling_platform_manages_capabilities": true,
   "country": "US",
-  "created": 1723157335,
-  "creation_request": "1723157333-req_evyGd3YSY3E7QT",
-  "dashboard_account_status": "restricted",
-  "dashboard_type": "full",
-  "default_account_holder_name": "DRIVER",
+  "created": 1723180511,
   "default_currency": "usd",
-  "details_submitted": false,
+  "details_submitted": true,
   "email": null,
-  "email_confirmed": false,
-  "external_account_changes_disabled": false,
   "external_accounts": {
     "object": "list",
-    "data": [],
+    "data": [
+      {
+        "id": "ba_1PllAPRokgnkBouwPCB8QHzB",
+        "object": "bank_account",
+        "account": "acct_1PllAPRokgnkBouw",
+        "account_holder_name": "Jenny Rosen",
+        "account_holder_type": "individual",
+        "account_type": null,
+        "available_payout_methods": [
+          "standard",
+          "instant"
+        ],
+        "bank_name": "STRIPE TEST BANK",
+        "country": "US",
+        "currency": "usd",
+        "debit_agreement": {
+          "accepted_at": 1723181146,
+          "expires_at": null,
+          "ip": "73.225.31.193",
+          "reference": null,
+          "status": "active",
+          "url": null,
+          "user_agent": ""
+        },
+        "default_for_currency": true,
+        "financial_account": null,
+        "fingerprint": "RiFJBpaUKZeLb2xH",
+        "future_requirements": {
+          "currently_due": [],
+          "errors": [],
+          "past_due": [],
+          "pending_verification": []
+        },
+        "last4": "6789",
+        "metadata": {},
+        "requirements": {
+          "currently_due": [],
+          "errors": [],
+          "past_due": [],
+          "pending_verification": []
+        },
+        "routing_number": "110000000",
+        "status": "new"
+      }
+    ],
     "has_more": false,
-    "total_count": 0,
-    "url": "/v1/accounts/acct_1Plf8bRwMUTtboFS/external_accounts"
+    "total_count": 1,
+    "url": "/v1/accounts/acct_1PllAPRokgnkBouw/external_accounts"
   },
-  "fake_account": true,
   "future_requirements": {
     "alternatives": [],
     "current_deadline": null,
@@ -99,28 +142,28 @@ stripe accounts create --business-type="individual" -d "individual[first_name]=D
     "errors": [],
     "eventually_due": [],
     "past_due": [],
-    "pending_verification": [],
-    "previously_due": []
+    "pending_verification": []
   },
   "individual": {
-    "id": "person_1Plf8bRwMUTtboFSHMc5TYp4",
+    "id": "person_1PllKgRokgnkBouwiFCJD2LQ",
     "object": "person",
-    "account": "acct_1Plf8bRwMUTtboFS",
+    "account": "acct_1PllAPRokgnkBouw",
     "address": {
-      "city": null,
+      "city": "Seattle",
       "country": "US",
-      "line1": null,
+      "line1": "address_full_match​\t",
       "line2": null,
-      "postal_code": null,
-      "state": null
+      "postal_code": "98109",
+      "state": "Washington"
     },
-    "created": 1723157334,
+    "created": 1723181148,
     "dob": {
-      "day": null,
-      "month": null,
-      "year": null
+      "day": 1,
+      "month": 1,
+      "year": 1901
     },
-    "first_name": "Driver",
+    "email": "samjanzarli@utexas.edu",
+    "first_name": "Samy",
     "future_requirements": {
       "alternatives": [],
       "currently_due": [],
@@ -129,20 +172,16 @@ stripe accounts create --business-type="individual" -d "individual[first_name]=D
       "past_due": [],
       "pending_verification": []
     },
-    "id_number_country": "US",
-    "id_number_keyed_in": false,
-    "id_number_provided": false,
-    "last_name": null,
+    "id_number_provided": true,
+    "last_name": "Janz",
     "metadata": {},
-    "personal_id_number_country": "US",
+    "personal_id_number_provided": true,
+    "phone": "+19729040647",
     "relationship": {
-      "controller": false,
       "director": false,
       "executive": false,
       "legal_guardian": false,
-      "officer": false,
       "owner": false,
-      "partner": false,
       "percent_ownership": null,
       "representative": true,
       "title": null
@@ -153,9 +192,17 @@ stripe accounts create --business-type="individual" -d "individual[first_name]=D
       "errors": [],
       "eventually_due": [],
       "past_due": [],
-      "pending_verification": []
+      "pending_verification": [
+        "address.city",
+        "address.line1",
+        "address.postal_code",
+        "address.state",
+        "id_number",
+        "verification.document"
+      ]
     },
-    "ssn_last_4_provided": false,
+    "ssn_last_4": "0000",
+    "ssn_last_4_provided": true,
     "verification": {
       "additional_document": {
         "back": null,
@@ -163,7 +210,7 @@ stripe accounts create --business-type="individual" -d "individual[first_name]=D
         "details_code": null,
         "front": null
       },
-      "details": "This person does not need to be verified to enable account capabilities",
+      "details": "The information on the account could not be verified with the IRS. Please either correct any possible errors in the company name, tax ID, or upload a document containing those fields.",
       "details_code": null,
       "document": {
         "back": null,
@@ -171,164 +218,35 @@ stripe accounts create --business-type="individual" -d "individual[first_name]=D
         "details_code": null,
         "front": null
       },
-      "status": "unverified"
+      "status": "pending"
     }
   },
-  "invoice_settings": {
-    "disable_legacy_credit_transfer_sources_types": true,
-    "failure_days": 60,
-    "invoicing_final_action": "none",
-    "manual_tax_rounding_behavior": "group",
-    "next_invoice_sequence_livemode": 1,
-    "next_invoice_sequence_testmode": 1,
-    "numbering_scheme": "customer_level",
-    "pastdue_invoices_final_transition": "none",
-    "pastdue_invoices_final_transition_days": 60,
-    "payment_methods_enabled_for_merchant": {
-      "ach_credit_transfer": false,
-      "acss_debit": true,
-      "afterpay_clearpay": false,
-      "alipay": false,
-      "amazon_pay": true,
-      "au_becs_debit": false,
-      "bacs_debit": false,
-      "bancontact": false,
-      "boleto": false,
-      "card": true,
-      "cashapp": true,
-      "customer_balance": true,
-      "demo_pay": false,
-      "eps": false,
-      "fpx": false,
-      "giropay": false,
-      "grabpay": false,
-      "id_bank_transfer": false,
-      "id_credit_transfer": false,
-      "ideal": false,
-      "jp_credit_transfer": false,
-      "kakao_pay": false,
-      "klarna": false,
-      "konbini": false,
-      "kr_card": false,
-      "kr_market": false,
-      "link": true,
-      "multibanco": true,
-      "naver_pay": false,
-      "netbanking": false,
-      "ng_market": false,
-      "nz_bank_account": false,
-      "p24": false,
-      "paper_check": false,
-      "payco": false,
-      "paynow": false,
-      "paypal": false,
-      "promptpay": false,
-      "revolut_pay": true,
-      "sepa_credit_transfer": false,
-      "sepa_debit": false,
-      "sofort": false,
-      "swish": false,
-      "upi": false,
-      "us_bank_account": true,
-      "wechat_pay": true
-    },
-    "send_hosted_payment_email": true,
-    "send_invoices": true,
-    "smart_dunning_enabled": true,
-    "supported_payment_methods": {
-      "ach_credit_transfer": false,
-      "acss_debit": false,
-      "afterpay_clearpay": false,
-      "alipay": false,
-      "amazon_pay": false,
-      "au_becs_debit": false,
-      "bacs_debit": false,
-      "bancontact": false,
-      "boleto": false,
-      "card": true,
-      "cashapp": true,
-      "customer_balance": true,
-      "demo_pay": false,
-      "eps": false,
-      "fpx": false,
-      "giropay": false,
-      "grabpay": false,
-      "id_bank_transfer": false,
-      "id_credit_transfer": false,
-      "ideal": false,
-      "jp_credit_transfer": false,
-      "kakao_pay": false,
-      "klarna": false,
-      "konbini": false,
-      "kr_card": false,
-      "kr_market": false,
-      "link": true,
-      "multibanco": false,
-      "naver_pay": false,
-      "netbanking": false,
-      "ng_market": false,
-      "nz_bank_account": false,
-      "p24": false,
-      "paper_check": false,
-      "payco": false,
-      "paynow": false,
-      "paypal": false,
-      "promptpay": false,
-      "revolut_pay": false,
-      "sepa_credit_transfer": false,
-      "sepa_debit": false,
-      "sofort": false,
-      "swish": false,
-      "upi": false,
-      "us_bank_account": true,
-      "wechat_pay": true
-    }
-  },
-  "legal_entity_shared_with": [],
-  "merchants_reonboarded_to": [],
   "metadata": {},
   "payouts_enabled": false,
-  "platform_can_request_capabilities": true,
-  "platform_can_unrequest_capabilities": true,
-  "primary_user": {
-    "id": "usr_QcuyGjizbks6NK",
-    "object": "user",
-    "email": null,
-    "name": null,
-    "password_set": null
-  },
-  "proration_settings": {
-    "smart_prorations": false
-  },
-  "reonboarding_destination_merchants": [],
   "requirements": {
     "alternatives": [],
     "current_deadline": null,
-    "currently_due": [
-      "business_profile.product_description",
-      "business_profile.support_phone",
-      "business_profile.url",
-      "external_account",
-      "tos_acceptance.date",
-      "tos_acceptance.ip"
-    ],
-    "disabled_reason": "requirements.past_due",
+    "currently_due": [],
+    "disabled_reason": "requirements.pending_verification",
     "errors": [],
-    "eventually_due": [
-      "business_profile.product_description",
-      "business_profile.support_phone",
-      "business_profile.url",
-      "external_account",
-      "tos_acceptance.date",
-      "tos_acceptance.ip"
-    ],
-    "past_due": [
-      "external_account",
-      "tos_acceptance.date",
-      "tos_acceptance.ip"
-    ],
-    "pending_verification": [],
-    "previously_due": []
+    "eventually_due": [],
+    "past_due": [],
+    "pending_verification": [
+      "individual.address.city",
+      "individual.address.line1",
+      "individual.address.postal_code",
+      "individual.address.state",
+      "individual.id_number",
+      "individual.verification.document"
+    ]
+  },
+  "risk_controls": {
+    "charges": {
+      "pause_requested": false
+    },
+    "payouts": {
+      "pause_requested": false
+    }
   },
   "settings": {
     "bacs_debit_payments": {
@@ -339,8 +257,7 @@ stripe accounts create --business-type="individual" -d "individual[first_name]=D
       "icon": null,
       "logo": null,
       "primary_color": null,
-      "secondary_color": null,
-      "show_support_phone": true
+      "secondary_color": null
     },
     "card_issuing": {
       "tos_acceptance": {
@@ -414,14 +331,14 @@ stripe accounts create --business-type="individual" -d "individual[first_name]=D
     "card_payments": {
       "decline_on": {
         "avs_failure": false,
-        "cvc_failure": true
+        "cvc_failure": false
       },
-      "statement_descriptor_prefix": null,
+      "statement_descriptor_prefix": "SAMYJANZ",
       "statement_descriptor_prefix_kana": null,
       "statement_descriptor_prefix_kanji": null
     },
     "dashboard": {
-      "display_name": null,
+      "display_name": "Lyft",
       "timezone": "Etc/UTC"
     },
     "invoices": {
@@ -429,12 +346,12 @@ stripe accounts create --business-type="individual" -d "individual[first_name]=D
     },
     "konbini_payments": {},
     "payments": {
-      "statement_descriptor": null,
+      "statement_descriptor": "SAMYJANZ",
       "statement_descriptor_kana": null,
       "statement_descriptor_kanji": null
     },
     "payouts": {
-      "debit_negative_balances": true,
+      "debit_negative_balances": false,
       "schedule": {
         "delay_days": 2,
         "interval": "daily"
@@ -442,6 +359,9 @@ stripe accounts create --business-type="individual" -d "individual[first_name]=D
       "statement_descriptor": null
     },
     "sepa_debit_payments": {},
+    "tax_forms": {
+      "consented_to_paperless_delivery": false
+    },
     "treasury": {
       "tos_acceptance": {
         "date": null,
@@ -449,14 +369,10 @@ stripe accounts create --business-type="individual" -d "individual[first_name]=D
       }
     }
   },
-  "stripe_owns_card_payments_pricing": true,
-  "stripe_owns_instant_payouts_pricing": true,
-  "stripe_owns_lpm_payments_pricing": true,
-  "stripe_owns_onboarding": true,
   "tos_acceptance": {
-    "date": null,
-    "ip": null,
+    "date": 1723181146,
+    "ip": "73.225.31.193",
     "user_agent": null
   },
-  "type": "standard"
+  "type": "custom"
 }
