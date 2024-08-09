@@ -1,0 +1,25 @@
+//Question 3c:
+Lyft's platform fee is the difference between what the rider pays ($20) and what the driver receives ($15).
+
+So, the platform fee is:
+
+Lyft Platform Fee = $20−$15 = $5
+
+
+
+//Question 3d:
+Stripe’s standard processing fees for a charge made on a platform like Lyft using Stripe Connect is typically:
+
+-2.9% of the transaction amount
+-Plus $0.30 per transaction
+
+For the $20 ride payment:
+
+Stripe Processing Fee=(2.9%×$20)+$0.30 = $0.88
+
+
+
+//Question 3e
+Lyft's earnings for this ride can be calculated by subtracting the Stripe processing fee from Lyft's platform fee.
+
+Lyft Earnings = $5-$0.88 = $4.12
