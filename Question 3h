@@ -1,0 +1,7 @@
+Question 3h
+
+//Event Ticket Platforms
+
+Platforms which sell tickets for events could make use of Stripe Connect. 
+These platforms can use Stripe Connect to handle tickets sales and transactions with all parties involved: consumers and event organizers.
+They can also leverage the APIs to handle transaction events such as refunds, complex fee structures and payment flows. Payment flow handling is useful if consumers choose to buy different packages and payment plans. 
