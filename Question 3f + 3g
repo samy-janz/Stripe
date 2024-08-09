@@ -1,0 +1,21 @@
+stripe transfer_reversals create tr_3Plm9HRr4FsILDOD1tevclk8 --amount="200" --description="Lyft sign" 
+
+{
+  "id": "trr_1Plyl5Rr4FsILDODedInOiCI",
+  "object": "transfer_reversal",
+  "amount": 200,
+  "balance_transaction": "txn_1Plyl5Rr4FsILDOD01NAhblJ",
+  "created": 1723232755,
+  "currency": "usd",
+  "destination_payment_refund": "pyr_1Plyl5RokgnkBouwbcd2QyZT",
+  "metadata": {},
+  "source_refund": null,
+  "transfer": "tr_3Plm9HRr4FsILDOD1tevclk8"
+}
+
+
+// Transfer Reversal method
+
+Since the payout has already occurred for the driver, we are using the transfer reveral method to pull $2 from that payout effectively only paying the driver $13.
+The test bank account is not verified and we do not have a payment method on file so rather than making a charge, I decided to deduct this from his payout on the most recent ride.
+This is useful especially if this is the last driver ever for the driver so we ensure payment is collected for the sign.
